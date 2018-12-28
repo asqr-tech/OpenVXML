@@ -1,0 +1,2 @@
+lsprefs
+import '/Users/phanikar/Workspace/Mobi/VHT/repos/OpenVXML/releng/org.eclipse.vtp.releng.buckminster/p2site_feature-git.cquery'

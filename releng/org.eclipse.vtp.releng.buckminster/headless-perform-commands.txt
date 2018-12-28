@@ -1,0 +1,4 @@
+clean
+build -c
+perform -D target.os=* -D target.ws=* -D target.arch=* org.eclipse.vtp.releng.p2site#buckminster.clean
+perform -D target.os=* -D target.ws=* -D target.arch=* org.eclipse.vtp.releng.p2site#site.p2
