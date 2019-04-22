@@ -70,6 +70,7 @@ public abstract class DataObject implements IDataObject
 	{
 		if (isReadOnly())
 			throw new IllegalStateException();
+		System.out.println("in DataObject save(): id= " +id +" type= "+ type.getName() +" value= "+value.toString());
 		variableStorage.setRecord(id, type, new Object[] {new Boolean(secured), value});
 	}
 
