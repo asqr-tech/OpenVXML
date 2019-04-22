@@ -1655,8 +1655,11 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 			Calendar cal = Calendar.getInstance();
 			if (obj == null)
 				return cal;
-			if(obj instanceof Calendar)
+			if(obj instanceof Calendar){
+				System.out.println("in coerce: "+obj);
+				System.out.println("in coerce: "+(Calendar)obj);
 				return (Calendar)obj;
+			}
 			if (obj instanceof Date)
 			{
 				cal.setTime((Date)obj);
@@ -1701,8 +1704,11 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 		public boolean setValue(Object value) throws IllegalStateException
 		{
 			Calendar cal = coerce(value);
-			if (cal == null)
+			if (cal == null){
+				System.out.println("in servalue: null");
 				return false;
+			}
+			System.out.println("in servalue: saving");
 			save(DateHelper.toDateString(cal));
 			return true;
 		}
