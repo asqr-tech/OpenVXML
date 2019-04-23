@@ -27,20 +27,25 @@ public class DateHelper
 			int index = dateString.indexOf("GMT");
 			if(index >= 0)
 			{
+				System.out.println("found GMT");
 				String tzOffsetString = dateString.substring(index);
 				TimeZone tzOffset = TimeZone.getTimeZone(tzOffsetString);
 				cal.setTimeZone(tzOffset);
 			}
 		}
+		System.out.println("in parseDate : "+ cal);
 		return cal;
 	}
 	
 	private static Calendar parseDate0(String dateString)
 	{
+		System.out.println("parsing date and time patterns");
 		for(String datePattern : datePatterns)
 		{
+			System.out.println(datePattern);
 			for(String timePattern : timePatterns)
 			{
+				System.out.println(timePattern);
 				SimpleDateFormat sdf = new SimpleDateFormat(datePattern + " " + timePattern);
 				try
 				{
@@ -52,8 +57,10 @@ public class DateHelper
 				}
 			}
 		}
+		System.out.println("parsing date patterns");
 		for(String datePattern : datePatterns)
 		{
+			System.out.println(datePattern);
 			SimpleDateFormat sdf = new SimpleDateFormat(datePattern);
 			try
 			{
@@ -64,8 +71,10 @@ public class DateHelper
 			{
 			}
 		}
+		System.out.println("parsing time patterns");
 		for(String timePattern : timePatterns)
 		{
+			System.out.println(timePattern);
 			SimpleDateFormat sdf = new SimpleDateFormat(timePattern);
 			try
 			{
