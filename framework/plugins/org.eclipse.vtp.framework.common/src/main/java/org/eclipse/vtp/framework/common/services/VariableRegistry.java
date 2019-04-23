@@ -285,8 +285,10 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 	 */
 	public void setRecord(String id, IDataType type, Object value)
 	{
-		if (type.equals(dataTypeRegistry.getDataType(type.getName())))
+		if (type.equals(dataTypeRegistry.getDataType(type.getName()))){
+			System.out.println("in setRecord if: "+value.toString());
 			context.setAttribute(id, (new Object[] { type.getName(), value }));
+		}
 		else
 		{
 			StringBuffer b = new StringBuffer("!"); //$NON-NLS-1$
@@ -308,6 +310,7 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 				b.append(':');
 				b.append(Boolean.toString(type.isFieldSecured(fields[i])));
 			}
+			System.out.println("in setRecord else: "+value.toString());
 			context.setAttribute(id, (new Object[] { b.toString(), value }));
 		}
 	}
@@ -1692,6 +1695,7 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 			Calendar cal = Calendar.getInstance();
 			String val = (String)load();
 			cal = DateHelper.parseDate(val);
+			System.out.println("**in getValue: "+cal);
 			return cal;
 		}
 
