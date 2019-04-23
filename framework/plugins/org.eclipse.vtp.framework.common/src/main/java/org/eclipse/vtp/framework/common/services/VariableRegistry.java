@@ -1693,7 +1693,9 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 		public Calendar getValue()
 		{
 			Calendar cal = Calendar.getInstance();
+			System.out.println("**in getValue: cal instance :"+cal);
 			String val = (String)load();
+			System.out.println("**in getValue: loaded value "+val);
 			cal = DateHelper.parseDate(val);
 			System.out.println("**in getValue: "+cal);
 			return cal;
