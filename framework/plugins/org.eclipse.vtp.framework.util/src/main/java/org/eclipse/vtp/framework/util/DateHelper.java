@@ -10,7 +10,7 @@ public class DateHelper
 	private static String[] datePatterns = new String[] { "M/d/yyyy",
 														  "M-d-yyyy",
 														  "M.d.yyyy"};
-	private static String[] timePatterns = new String[] { "h:mm:ss a z",
+	private static String[] timePatterns = new String[] { "h:mm:ss a Z",
 														  "H:mm:ss z",
 														  "h:mm:ss a",
 														  "H:mm:ss",
