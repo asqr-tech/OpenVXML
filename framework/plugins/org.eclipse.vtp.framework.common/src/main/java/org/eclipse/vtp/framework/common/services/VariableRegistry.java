@@ -1687,8 +1687,8 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 		public Calendar getValue()
 		{
 			Calendar cal = Calendar.getInstance();
-			String val = (String)load();
-			cal = DateHelper.parseDate(val);
+			Calendar val = (Calendar)load();
+			cal = val;
 			return cal;
 		}
 
@@ -1703,7 +1703,7 @@ public class VariableRegistry implements IVariableRegistry, IScriptable, IVariab
 			Calendar cal = coerce(value);
 			if (cal == null)
 				return false;
-			save(DateHelper.toDateString(cal));
+			save(cal);
 			return true;
 		}
 
