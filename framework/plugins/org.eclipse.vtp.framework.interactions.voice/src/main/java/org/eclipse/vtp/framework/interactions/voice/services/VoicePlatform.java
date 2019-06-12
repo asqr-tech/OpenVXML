@@ -1066,6 +1066,7 @@ public class VoicePlatform extends AbstractPlatform implements VXMLConstants
 		filled.addVariable(new Variable(dataRequestCommand.getResultName(), "'"
 				+ dataRequestCommand.getFilledResultValue() + "'"));
 		filled.addVariable(new Variable(dataRequestCommand.getDataName() + "_termchar", dataRequestCommand.getDataName() + "$.termchar"));
+		filled.addVariable(new Variable(dataRequestCommand.getDataName() + "_size", dataRequestCommand.getDataName() + "$.size"));
 		for (int i = 0; i < parameterNames.length; ++i)
 		{
 			submitVars[i + 4] = parameterNames[i];
