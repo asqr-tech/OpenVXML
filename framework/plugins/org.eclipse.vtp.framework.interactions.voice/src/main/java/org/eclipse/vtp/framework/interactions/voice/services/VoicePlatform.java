@@ -1057,7 +1057,7 @@ public class VoicePlatform extends AbstractPlatform implements VXMLConstants
 		prompt.setLanguage(getCurrentLocale());
 		recording.setPrompt(prompt);
 		String[] parameterNames = dataRequestCommand.getParameterNames();
-		String[] submitVars = new String[parameterNames.length + 4];
+		String[] submitVars = new String[parameterNames.length + 5];
 		submitVars[0] = dataRequestCommand.getDataName();
 		submitVars[1] = dataRequestCommand.getResultName();
 		submitVars[2] = dataRequestCommand.getDataName() + "_termchar";
@@ -1070,7 +1070,7 @@ public class VoicePlatform extends AbstractPlatform implements VXMLConstants
 		filled.addVariable(new Variable(dataRequestCommand.getDataName() + "_size", dataRequestCommand.getDataName() + "$.size"));
 		for (int i = 0; i < parameterNames.length; ++i)
 		{
-			submitVars[i + 4] = parameterNames[i];
+			submitVars[i + 5] = parameterNames[i];
 			String[] values = dataRequestCommand
 					.getParameterValues(parameterNames[i]);
 			StringBuffer buf = new StringBuffer();
