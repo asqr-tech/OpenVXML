@@ -26,7 +26,7 @@
 		</repository>
 		<repository>
 			<id>buildVHT-elements</id>
-			<url>file:///E:/EclWorkspace/Upgrade/BuildVHT/com.buildvht.elements/releng/com.buildvht.elements.update/target/repository</url>
+			<url>file:///E:/Git/Elements/com.vht.elements/releng/com.vht.elements.update/target/repository</url>
 			<layout>p2</layout>
 		</repository>
 		<repository>
