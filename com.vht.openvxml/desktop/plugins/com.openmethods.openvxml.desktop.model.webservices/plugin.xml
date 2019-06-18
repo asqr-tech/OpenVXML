@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="WebserviceModelBuilder"
+         name="Webservice Model Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="false">
+         <run
+               class="com.openmethods.openvxml.desktop.model.webservices.builders.WebserviceModelBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="wsdlMarker"
+         name="Webservice Model Marker"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <super
+            type="org.eclipse.core.resources.textmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="org.eclipse.vtp.desktop.model.core.projectAspects">
+      <aspect
+            factory="com.openmethods.openvxml.desktop.model.webservices.internal.WebserviceProjectAspectFactory"
+            id="com.openmethods.openvxml.desktop.model.aspect.webservices">
+      </aspect>
+   </extension>
+
+</plugin>

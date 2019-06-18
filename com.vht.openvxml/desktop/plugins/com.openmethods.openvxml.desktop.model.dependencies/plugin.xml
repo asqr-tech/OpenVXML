@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.vtp.desktop.model.core.projectAspects">
+      <aspect
+            factory="com.openmethods.openvxml.desktop.model.dependencies.internal.ExternalDependenciesProjectAspectFactory"
+            id="com.openmethods.openvxml.desktop.model.aspect.dependencies">
+      </aspect>
+   </extension>
+
+</plugin>
