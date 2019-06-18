@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cq:componentQuery xmlns:cq="http://www.eclipse.org/buckminster/CQuery-1.0" resourceMap="org.eclipse.vtp-4.0.rmap">
-    <cq:rootRequest name="org.eclipse.vtp.releng.p2site" componentType="eclipse.feature" versionDesignator="4.0.0"/>
-    <cq:advisorNode namePattern="^org\.eclipse\.vtp\.framework.*" branchTagPath="enhanced-team-support"/>
-    <cq:advisorNode namePattern="^org\.eclipse\.vtp\.desktop.*" branchTagPath="enhanced-team-support"/>
-    <cq:advisorNode namePattern="^org\.eclipse\.vtp\.modules.*" branchTagPath="enhanced-team-support"/>
-</cq:componentQuery>

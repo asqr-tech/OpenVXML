@@ -1,2 +1,0 @@
-instructions.configure=org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(location:http${#58}//download.eclipse.org/technology/vtp/helios,type:0,name:Voice Tools Project for Helios,enabled:true); \
-  org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(location:http${#58}//download.eclipse.org/technology/vtp/helios,type:1,name:Voice Tools Project for Helios,enabled:true);
