@@ -26,7 +26,7 @@ import org.eclipse.vtp.framework.util.Guid;
 
 import com.openmethods.openvxml.idriver.runtime.configuration.IDriverConfiguration;
 
-@SuppressWarnings({ "rawtypes","unused", "unchecked" })
+@SuppressWarnings({ "rawtypes", "unused", "unchecked" })
 public class IDriverInitAction implements IAction
 {
 	/** The context to use. */
@@ -38,12 +38,11 @@ public class IDriverInitAction implements IAction
 	/**
 	 * Creates a new MetaDataMessageAction.
 	 * 
-	 * @param logger The logger to use.
-	 * @param conversation The conversation to use.
+	 * @param logger        The logger to use.
+	 * @param conversation  The conversation to use.
 	 * @param configuration The configuration to use.
 	 */
-	public IDriverInitAction(IActionContext context, IVariableRegistry variables,
-			IDriverConfiguration configuration)
+	public IDriverInitAction(IActionContext context, IVariableRegistry variables, IDriverConfiguration configuration)
 	{
 		this.context = context;
 		this.variables = variables;
@@ -57,62 +56,57 @@ public class IDriverInitAction implements IAction
 	 */
 	public IActionResult execute()
 	{
-		context.debug(getClass().getName().substring(
-				getClass().getName().lastIndexOf('.') + 1));
+		context.debug(getClass().getName().substring(getClass().getName().lastIndexOf('.') + 1));
 		IDataObject obj = variables.getVariable(configuration.getPortVariable());
-		if(obj != null && obj instanceof IValueObject)
+		if (obj != null && obj instanceof IValueObject)
 		{
 			try
 			{
-				long port = Long.parseLong(String.valueOf(((IValueObject)obj).toValue()));
+				long port = Long.parseLong(String.valueOf(((IValueObject) obj).toValue()));
 				String callId = Guid.createGUID();
 				obj = variables.getVariable(configuration.getCallIdVariable());
-				if(obj != null && obj instanceof IValueObject)
+				if (obj != null && obj instanceof IValueObject)
 				{
-					Object value = ((IValueObject)obj).toValue();
-					if(value != null)
-						callId = String.valueOf(value);
+					Object value = ((IValueObject) obj).toValue();
+					if (value != null) callId = String.valueOf(value);
 				}
-				IStringObject dnisObject = (IStringObject)variables.getVariable("Platform.DNIS");
+				IStringObject dnisObject = (IStringObject) variables.getVariable("Platform.DNIS");
 				String dnis = "";
-				if(dnisObject != null && dnisObject.getValue() != null)
-					dnis = dnisObject.getValue();
-				IStringObject aniObject = (IStringObject)variables.getVariable("Platform.ANI");
+				if (dnisObject != null && dnisObject.getValue() != null) dnis = dnisObject.getValue();
+				IStringObject aniObject = (IStringObject) variables.getVariable("Platform.ANI");
 				String ani = "";
-				if(aniObject != null && aniObject.getValue() != null)
-					ani = aniObject.getValue();
+				if (aniObject != null && aniObject.getValue() != null) ani = aniObject.getValue();
 				context.info("About to load dummy class");
 				Class dummyClass = Class.forName("com.openmethods.openvxml.idriver.Dummy");
 				context.info("loaded dummy class");
 				Class driverClass = Class.forName("com.openmethods.openvxml.idriver.GenesysIDriver");
 				Method instanceMethod = driverClass.getMethod("getInstance", null);
 				Object instanceObject = instanceMethod.invoke(null, new Object[0]);
-				Method startCallMethod = driverClass.getMethod("startCall", new Class[] { long.class, String.class, String.class, String.class});
-				Boolean callStarted = (Boolean)startCallMethod.invoke(instanceObject, port, callId, dnis, ani);
-				if(!callStarted)
-					return context.createResult("error.nodriver");
+				Method startCallMethod = driverClass.getMethod("startCall", new Class[] { long.class, String.class, String.class, String.class });
+				Boolean callStarted = (Boolean) startCallMethod.invoke(instanceObject, port, callId, dnis, ani);
+				if (!callStarted) return context.createResult("error.nodriver");
 				context.setRootAttribute("idriver.port", new Long(port));
-				Method getConnIdMethod = driverClass.getMethod("getConnId", new Class[] {long.class});
-				String connId = (String)getConnIdMethod.invoke(instanceObject, port);
+				Method getConnIdMethod = driverClass.getMethod("getConnId", new Class[] { long.class });
+				String connId = (String) getConnIdMethod.invoke(instanceObject, port);
 				System.out.println("Got conn ID " + connId);
-				IStringObject connIdVariable = (IStringObject)variables.createVariable(IStringObject.TYPE_NAME);
+				IStringObject connIdVariable = (IStringObject) variables.createVariable(IStringObject.TYPE_NAME);
 				connIdVariable.setValue(connId);
 				variables.setVariable(configuration.getConnIdVariable(), connIdVariable);
 				System.out.println("set conn id into " + configuration.getConnIdVariable());
-				Method getAllUDataMethod = driverClass.getMethod("getAllUData", new Class[] {long.class});
-				Map<String, String> data = (Map<String, String>)getAllUDataMethod.invoke(instanceObject, port);
+				Method getAllUDataMethod = driverClass.getMethod("getAllUData", new Class[] { long.class });
+				Map<String, String> data = (Map<String, String>) getAllUDataMethod.invoke(instanceObject, port);
 				System.out.println("Retrieved " + data.size() + " kv pairs");
-				IMapObject dataVariable = (IMapObject)variables.createVariable(IMapObject.TYPE_NAME);
-				for(Map.Entry<String, String> entry : data.entrySet())
+				IMapObject dataVariable = (IMapObject) variables.createVariable(IMapObject.TYPE_NAME);
+				for (Map.Entry<String, String> entry : data.entrySet())
 				{
 					System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
-					IStringObject valueObject = (IStringObject)variables.createVariable(IStringObject.TYPE_NAME);
+					IStringObject valueObject = (IStringObject) variables.createVariable(IStringObject.TYPE_NAME);
 					valueObject.setValue(entry.getValue());
 					dataVariable.setField(entry.getKey(), valueObject);
 				}
 				variables.setVariable("userData", dataVariable);
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				ex.printStackTrace();
 			}

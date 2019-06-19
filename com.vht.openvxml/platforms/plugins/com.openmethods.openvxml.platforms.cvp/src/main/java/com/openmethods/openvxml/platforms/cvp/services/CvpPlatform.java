@@ -86,17 +86,17 @@ public class CvpPlatform extends VoicePlatform
 		return document;
 	}
 
-	@SuppressWarnings("incomplete-switch")
 	protected IDocument renderInputRequest(ILinkFactory links, InputRequestCommand inputRequestCommand)
 	{
 		Form form = new Form("InputRequestForm"); //$NON-NLS-1$
 		String bargeIn = inputRequestCommand.getPropertyValue("barge-in"); //$NON-NLS-1$
 		if (Boolean.TRUE.toString().equalsIgnoreCase(bargeIn))
 			bargeIn = Boolean.TRUE.toString();
-		else if (Boolean.FALSE.toString().equalsIgnoreCase(bargeIn))
-			bargeIn = Boolean.FALSE.toString();
 		else
-			bargeIn = null;
+			if (Boolean.FALSE.toString().equalsIgnoreCase(bargeIn))
+				bargeIn = Boolean.FALSE.toString();
+			else
+				bargeIn = null;
 		TimeValue timeout = resolveTimeValue("initial-timeout", inputRequestCommand.getPropertyValue("initial-timeout")); //$NON-NLS-2$
 		String inputMode = inputRequestCommand.getPropertyValue("input-mode"); //$NON-NLS-1$
 		if (inputMode == null || inputMode.length() == 0) inputMode = "dtmf only"; //$NON-NLS-1$
@@ -114,7 +114,7 @@ public class CvpPlatform extends VoicePlatform
 		String terminationCharacter = inputRequestCommand.getPropertyValue("termination-character"); //$NON-NLS-1$
 		Field field = new Field(inputRequestCommand.getDataName());
 		if (bargeIn != null) field.setProperty(NAME_BARGEIN, bargeIn);
-		if (timeout != null) field.setProperty(NAME_TIMEOUT, timeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
+		if (timeout != null) field.setProperty(NAME_TIMEOUT, timeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
 		if ("hybrid".equalsIgnoreCase(inputMode))
 		{
 			field.setProperty(NAME_INPUTMODES, "dtmf voice"); //$NON-NLS-1$
@@ -154,10 +154,10 @@ public class CvpPlatform extends VoicePlatform
 			{
 				e.printStackTrace();
 			}
-			if (speechCompletionTimeout != null) field.setProperty(NAME_COMPLETETIMEOUT, speechCompletionTimeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
-			if (speechIncompleteTimeout != null) field.setProperty(NAME_INCOMPLETETIMEOUT, speechIncompleteTimeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
+			if (speechCompletionTimeout != null) field.setProperty(NAME_COMPLETETIMEOUT, speechCompletionTimeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
+			if (speechIncompleteTimeout != null) field.setProperty(NAME_INCOMPLETETIMEOUT, speechIncompleteTimeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
 			if (maxSpeechLength != null)
-				field.setProperty(NAME_MAXSPEECHTIMEOUT, maxSpeechLength.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
+				field.setProperty(NAME_MAXSPEECHTIMEOUT, maxSpeechLength.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
 			else
 				field.setProperty(NAME_MAXSPEECHTIMEOUT, "10s"); //$NON-NLS-1$
 			if (maxNBest != null && maxNBest.length() > 0) field.setProperty(NAME_MAXNBEST, maxNBest);
@@ -169,8 +169,8 @@ public class CvpPlatform extends VoicePlatform
 		}
 		else
 		{
-			if (interDigitTimeout != null) field.setProperty(NAME_INTERDIGITTIMEOUT, interDigitTimeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
-			if (terminationTimeout != null) field.setProperty(NAME_TERMTIMEOUT, terminationTimeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
+			if (interDigitTimeout != null) field.setProperty(NAME_INTERDIGITTIMEOUT, interDigitTimeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
+			if (terminationTimeout != null) field.setProperty(NAME_TERMTIMEOUT, terminationTimeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
 			if (terminationCharacter != null && terminationCharacter.length() > 0 && !"none".equalsIgnoreCase(terminationCharacter)) //$NON-NLS-1$
 				field.setProperty(NAME_TERMCHAR, terminationCharacter);
 			else
@@ -299,7 +299,7 @@ public class CvpPlatform extends VoicePlatform
 					String customData = inputRequestCommand.getInputValue();
 					if (customData != null && customData.startsWith(VXML_BUILTIN_PREFIX))
 					{
-						//field.setType(customData.substring(VXML_BUILTIN_PREFIX.length()));
+						// field.setType(customData.substring(VXML_BUILTIN_PREFIX.length()));
 						field.addGrammar(new ExternalGrammar("dtmf", customData));
 					}
 					break;
@@ -319,7 +319,7 @@ public class CvpPlatform extends VoicePlatform
 					String customData = inputRequestCommand.getInput2Value();
 					if (customData != null && customData.startsWith(VXML_BUILTIN_PREFIX))
 					{
-						//field.setType(customData.substring(VXML_BUILTIN_PREFIX.length()));
+						// field.setType(customData.substring(VXML_BUILTIN_PREFIX.length()));
 						field.addGrammar(new ExternalGrammar("dtmf", customData));
 					}
 					break;
@@ -334,8 +334,8 @@ public class CvpPlatform extends VoicePlatform
 			filledLink.setParameters(parameterNames[i], inputRequestCommand.getParameterValues(parameterNames[i]));
 		Filled filled = new Filled();
 		filled.addVariable(new Variable(inputRequestCommand.getResultName(), "'" + inputRequestCommand.getFilledResultValue() + "'"));
-		//		filledLink.setParameter(inputRequestCommand.getResultName(),
-		//				inputRequestCommand.getFilledResultValue());
+		// filledLink.setParameter(inputRequestCommand.getResultName(),
+		// inputRequestCommand.getFilledResultValue());
 		filled.addVariable(new Variable("lastresult", "'<lastresult>'"));
 		If ifTag = new If("typeof(application.lastresult$.markname) == 'string'");
 		Script markScript = new Script();
@@ -362,19 +362,25 @@ public class CvpPlatform extends VoicePlatform
 		elseTag.addScript(noMarkScript);
 		ifTag.setElse(elseTag);
 		filled.addIfClause(ifTag);
-		//		Script script = new Script();
-		//		script.setText( "		lastresult = lastresult + '<mark name=\"' + application.lastresult$.markname + '\" offset=\"' + application.lastresult$.marktime + '\"/>';\r\n" +
-		//						"		for(var i = 0; i < application.lastresult$.length; i++)\r\n" +
-		//						"		{\r\n" +
-		//						"			lastresult = lastresult + '<result>';\r\n" +
-		//						"			lastresult = lastresult + '<confidence>' + application.lastresult$[i].confidence + '</confidence>';\r\n" +
-		//						"			lastresult = lastresult + '<utterance><![CDATA[' + application.lastresult$[i].utterance + ']]></utterance>';\r\n" +
-		//						"			lastresult = lastresult + '<inputmode><![CDATA[' + application.lastresult$[i].inputmode + ']]></inputmode>';\r\n" +
-		//						"			lastresult = lastresult + '<interpretation><![CDATA[' + application.lastresult$[i].interpretation + ']]></interpretation>';\r\n" +
-		//						"			lastresult = lastresult + '</result>';\r\n" +
-		//						"		}\r\n" +
-		//						"		lastresult = lastresult + '</lastresult>';\r\n");
-		//		filled.addScript(script);
+		// Script script = new Script();
+		// script.setText( " lastresult = lastresult + '<mark name=\"' +
+		// application.lastresult$.markname + '\" offset=\"' +
+		// application.lastresult$.marktime + '\"/>';\r\n" +
+		// " for(var i = 0; i < application.lastresult$.length; i++)\r\n" +
+		// " {\r\n" +
+		// " lastresult = lastresult + '<result>';\r\n" +
+		// " lastresult = lastresult + '<confidence>' +
+		// application.lastresult$[i].confidence + '</confidence>';\r\n" +
+		// " lastresult = lastresult + '<utterance><![CDATA[' +
+		// application.lastresult$[i].utterance + ']]></utterance>';\r\n" +
+		// " lastresult = lastresult + '<inputmode><![CDATA[' +
+		// application.lastresult$[i].inputmode + ']]></inputmode>';\r\n" +
+		// " lastresult = lastresult + '<interpretation><![CDATA[' +
+		// application.lastresult$[i].interpretation + ']]></interpretation>';\r\n" +
+		// " lastresult = lastresult + '</result>';\r\n" +
+		// " }\r\n" +
+		// " lastresult = lastresult + '</lastresult>';\r\n");
+		// filled.addScript(script);
 		Submit filledSubmit = new Submit(filledLink.toString(),
 			new String[] { inputRequestCommand.getResultName(), inputRequestCommand.getDataName(), "lastresult" });
 		filledSubmit.setMethod(METHOD_POST);
@@ -383,8 +389,8 @@ public class CvpPlatform extends VoicePlatform
 		ILink noInputLink = links.createNextLink();
 		for (int i = 0; i < parameterNames.length; ++i)
 			noInputLink.setParameters(parameterNames[i], inputRequestCommand.getParameterValues(parameterNames[i]));
-		//		noInputLink.setParameter(inputRequestCommand.getResultName(),
-		//				inputRequestCommand.getNoInputResultValue());
+		// noInputLink.setParameter(inputRequestCommand.getResultName(),
+		// inputRequestCommand.getNoInputResultValue());
 		NoInput noInput = new NoInput();
 		noInput.addVariable(new Variable(inputRequestCommand.getResultName(), "'" + inputRequestCommand.getNoInputResultValue() + "'"));
 		noInput
@@ -393,8 +399,8 @@ public class CvpPlatform extends VoicePlatform
 		ILink noMatchLink = links.createNextLink();
 		for (int i = 0; i < parameterNames.length; ++i)
 			noMatchLink.setParameters(parameterNames[i], inputRequestCommand.getParameterValues(parameterNames[i]));
-		//		noMatchLink.setParameter(inputRequestCommand.getResultName(),
-		//				inputRequestCommand.getNoMatchResultValue());
+		// noMatchLink.setParameter(inputRequestCommand.getResultName(),
+		// inputRequestCommand.getNoMatchResultValue());
 		NoMatch noMatch = new NoMatch();
 		noMatch.addVariable(new Variable(inputRequestCommand.getResultName(), "'" + inputRequestCommand.getNoMatchResultValue() + "'"));
 		noMatch.addVariable(new Variable("lastresult", "'<lastresult>'"));
@@ -423,18 +429,24 @@ public class CvpPlatform extends VoicePlatform
 		elseTag.addScript(noMarkScript);
 		ifTag.setElse(elseTag);
 		noMatch.addIfClause(ifTag);
-		//		script = new Script();
-		//		script.setText( "		lastresult = lastresult + '<mark name=\"' + application.lastresult$.markname + '\" offset=\"' + application.lastresult$.marktime + '\"/>';\r\n" +
-		//				"		for(var i = 0; i < application.lastresult$.length; i++)\r\n" +
-		//				"		{\r\n" +
-		//				"			lastresult = lastresult + '<result>';\r\n" +
-		//				"			lastresult = lastresult + '<confidence>' + application.lastresult$[i].confidence + '</confidence>';\r\n" +
-		//				"			lastresult = lastresult + '<utterance><![CDATA[' + application.lastresult$[i].utterance + ']]></utterance>';\r\n" +
-		//				"			lastresult = lastresult + '<inputmode><![CDATA[' + application.lastresult$[i].inputmode + ']]></inputmode>';\r\n" +
-		//				"			lastresult = lastresult + '<interpretation><![CDATA[' + application.lastresult$[i].interpretation + ']]></interpretation>';\r\n" +
-		//				"			lastresult = lastresult + '</result>';\r\n" +
-		//				"		}\r\n" +
-		//				"		lastresult = lastresult + '</lastresult>';\r\n");
+		// script = new Script();
+		// script.setText( " lastresult = lastresult + '<mark name=\"' +
+		// application.lastresult$.markname + '\" offset=\"' +
+		// application.lastresult$.marktime + '\"/>';\r\n" +
+		// " for(var i = 0; i < application.lastresult$.length; i++)\r\n" +
+		// " {\r\n" +
+		// " lastresult = lastresult + '<result>';\r\n" +
+		// " lastresult = lastresult + '<confidence>' +
+		// application.lastresult$[i].confidence + '</confidence>';\r\n" +
+		// " lastresult = lastresult + '<utterance><![CDATA[' +
+		// application.lastresult$[i].utterance + ']]></utterance>';\r\n" +
+		// " lastresult = lastresult + '<inputmode><![CDATA[' +
+		// application.lastresult$[i].inputmode + ']]></inputmode>';\r\n" +
+		// " lastresult = lastresult + '<interpretation><![CDATA[' +
+		// application.lastresult$[i].interpretation + ']]></interpretation>';\r\n" +
+		// " lastresult = lastresult + '</result>';\r\n" +
+		// " }\r\n" +
+		// " lastresult = lastresult + '</lastresult>';\r\n");
 		Submit noMatchSubmit = new Submit(noMatchLink.toString(),
 			new String[] { inputRequestCommand.getResultName(), inputRequestCommand.getDataName(), "lastresult" });
 		noMatchSubmit.setMethod(METHOD_POST);
@@ -501,15 +513,15 @@ public class CvpPlatform extends VoicePlatform
 		Prompt prompt = new Prompt(outputs);
 		if (bargeIn != null) prompt.setBargeInEnabled(Boolean.valueOf(bargeIn).booleanValue());
 		prompt.setLanguage(getCurrentLocale());
-		//		Menu menu = new Menu(selectionRequestCommand.getSelectionName(), prompt);
+		// Menu menu = new Menu(selectionRequestCommand.getSelectionName(), prompt);
 		Field field = new Field(selectionRequestCommand.getSelectionName(), prompt);
 
 		if (bargeIn != null) field.setProperty(NAME_BARGEIN, bargeIn);
-		if (timeout != null) field.setProperty(NAME_TIMEOUT, timeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
+		if (timeout != null) field.setProperty(NAME_TIMEOUT, timeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
 		grammarMode = GRAMMAR_MODE_DTMF;
 		field.setProperty(NAME_INPUTMODES, "dtmf"); //$NON-NLS-1$
-		if (interDigitTimeout != null) field.setProperty(NAME_INTERDIGITTIMEOUT, interDigitTimeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
-		if (terminationTimeout != null) field.setProperty(NAME_TERMTIMEOUT, terminationTimeout.toTimeString(TimeValue.SECONDS)); //$NON-NLS-1$
+		if (interDigitTimeout != null) field.setProperty(NAME_INTERDIGITTIMEOUT, interDigitTimeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
+		if (terminationTimeout != null) field.setProperty(NAME_TERMTIMEOUT, terminationTimeout.toTimeString(TimeValue.SECONDS)); // $NON-NLS-1$
 		if (terminationCharacter != null && terminationCharacter.length() > 0 && !"none".equalsIgnoreCase(terminationCharacter)) //$NON-NLS-1$
 			field.setProperty(NAME_TERMCHAR, terminationCharacter);
 		else
@@ -531,25 +543,27 @@ public class CvpPlatform extends VoicePlatform
 				ifElement = new If(selectionRequestCommand.getSelectionName() + " == " + dtmf);
 				ifElement.addAction(new Goto(nextLink.toString()));
 			}
-			else if (i == selectionRequestCommand.getOptionCount() - 1)
-			{
-				Else elseElement = new Else();
-				ifElement.setElse(elseElement);
-				elseElement.addAction(new Goto(nextLink.toString()));
-			}
 			else
-			{
-				ElseIf elseIfElement = new ElseIf(selectionRequestCommand.getSelectionName() + " == " + dtmf);
-				ifElement.addElseIf(elseIfElement);
-				elseIfElement.addAction(new Goto(nextLink.toString()));
-			}
+				if (i == selectionRequestCommand.getOptionCount() - 1)
+				{
+					Else elseElement = new Else();
+					ifElement.setElse(elseElement);
+					elseElement.addAction(new Goto(nextLink.toString()));
+				}
+				else
+				{
+					ElseIf elseIfElement = new ElseIf(selectionRequestCommand.getSelectionName() + " == " + dtmf);
+					ifElement.addElseIf(elseIfElement);
+					elseIfElement.addAction(new Goto(nextLink.toString()));
+				}
 			String silent = selectionRequestCommand.getOptionProperty(i, "silent"); //$NON-NLS-1$
 			if (Boolean.TRUE.toString().equalsIgnoreCase(silent))
 				silent = Boolean.TRUE.toString();
-			else if (Boolean.FALSE.toString().equalsIgnoreCase(silent))
-				silent = Boolean.FALSE.toString();
 			else
-				silent = null;
+				if (Boolean.FALSE.toString().equalsIgnoreCase(silent))
+					silent = Boolean.FALSE.toString();
+				else
+					silent = null;
 			if (!Boolean.TRUE.toString().equals(silent))
 			{
 				for (int j = 0; j < selectionRequestCommand.getOptionOutputCount(i); ++j)
