@@ -25,8 +25,8 @@
 			<layout>p2</layout>
 		</repository>
 		<repository>
-			<id>build-vht</id>
-			<url>file:///C:/OpenVXML</url>
+			<id>Elements</id>
+			<url>http://build.vhtcx.com/downloads/Elements/maven/repository/</url>
 			<layout>p2</layout>
 		</repository>
 		<repository>
