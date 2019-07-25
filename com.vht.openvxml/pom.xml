@@ -11,14 +11,54 @@
 		<relativePath>./releng/com.vht.openvxml.configuration</relativePath>
 	</parent>
 	<modules>
-		<module>desktop</module>
-		<module>platforms</module>
-		<module>framework</module>
 		<module>releng</module>
+		<module>features</module>
+		<module>plugins</module>
 	</modules>
+
 	<build>
+
+		<!-- Declaring test files location -->
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+
 		<pluginManagement>
 			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.12.4</version>
+					<executions>
+						<execution>
+							<id>test</id>
+							<phase>test</phase>
+							<configuration>
+								<includes>
+									<include>**/*Test.java</include>
+								</includes>
+							</configuration>
+							<goals>
+								<goal>test</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.5.1</version>
+					<executions>
+						<execution>
+							<id>compiletests</id>
+							<phase>test-compile</phase>
+							<goals>
+								<goal>testCompile</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
 				<plugin>

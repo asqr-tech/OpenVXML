@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Idriver
+Bundle-SymbolicName: com.openmethods.openvxml.idriver
+Bundle-Version: 5.0.0.qualifier
+Bundle-Vendor: OPENMETHODS
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.sun.jna
+Export-Package: com.openmethods.openvxml.idriver
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.7.0"
+Automatic-Module-Name: com.openmethods.openvxml.idriver
