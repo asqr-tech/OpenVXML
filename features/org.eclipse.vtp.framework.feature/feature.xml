@@ -101,13 +101,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.commons.fileupload"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.xml.rpc"
          download-size="0"
          install-size="0"
@@ -143,14 +136,21 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.equinox.http.servletbridge"
+         id="org.eclipse.equinox.servletbridge"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.equinox.servletbridge"
+         id="org.apache.commons.fileupload"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.http.servletbridge"
          download-size="0"
          install-size="0"
          version="0.0.0"
