@@ -1,0 +1,75 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: nl1UNbQh5dPvFpIjZjkUVtP9DbaF/
+ TlAcP4dsifZ31o=
+SHA-256-Digest-Manifest: 12aWDlSaoOIXo38+lSbsQHAFvuYFeHbpIcApDPUAWSc=
+Created-By: 1.8.0_51 (Oracle Corporation)
+
+Name: org/eclipse/equinox/servletbridge/FrameworkLauncher$4.class
+SHA-256-Digest: TlM/oakm33yv66hMRlOCcbrckrnUJzPNErAYSExdH6M=
+
+Name: org/eclipse/equinox/servletbridge/FrameworkLauncher$1$1.class
+SHA-256-Digest: qrP96H3juirAzuokzItOlOatAatcJ4TQKa0sfmInpCg=
+
+Name: about.html
+SHA-256-Digest: ncO+WCNUIJ0JLCOl/ot53yopwTqvvtVu0qSgblesdYo=
+
+Name: org/eclipse/equinox/servletbridge/CloseableURLClassLoader$3.clas
+ s
+SHA-256-Digest: M2/ayvqBH3R6U8gICUULYyUQVd2ny/yHxiT5SBJrEog=
+
+Name: org/eclipse/equinox/servletbridge/CloseableURLClassLoader.class
+SHA-256-Digest: DC/SV2TkqZXd+DWy/kDnIMDne4hXTVelkBWvoUmYOgM=
+
+Name: .api_description
+SHA-256-Digest: dyYLHETVPTSV7w32SRcI5sXcGVQBO01wVMg6ve7TYmk=
+
+Name: org/eclipse/equinox/servletbridge/CloseableURLClassLoader$2.clas
+ s
+SHA-256-Digest: rCv7OOS/FiayWp4ruagxjm2/TJkq1IpQ2+CDglua53I=
+
+Name: org/eclipse/equinox/servletbridge/CloseableURLClassLoader$Closea
+ bleJarFileLoader.class
+SHA-256-Digest: 7MUzq7v5Drae5a8KRB7iYd3dgtlGrCJf1qunjmM7vKA=
+
+Name: org/eclipse/equinox/servletbridge/CloseableURLClassLoader$Closea
+ bleJarURLConnection.class
+SHA-256-Digest: FKBxRuo7Ra8YnpVtlI8OSu1mbvFyVJXbCyJCav9PSYM=
+
+Name: org/eclipse/equinox/servletbridge/FrameworkLauncher$3.class
+SHA-256-Digest: ZhBdHJowK6I+lTV/7ywvl2/ntMU+c2EjD//9giuCRjM=
+
+Name: org/eclipse/equinox/servletbridge/FrameworkLauncher$ChildFirstUR
+ LClassLoader.class
+SHA-256-Digest: ykpK7F3PgIi5LFlnzE4opkp96jXms6ex4oucRA3LBNc=
+
+Name: org/eclipse/equinox/servletbridge/FrameworkLauncher$1.class
+SHA-256-Digest: y7XjwwOS/uZlBWR57/8FuHndfes1haJFplm6SswZP00=
+
+Name: org/eclipse/equinox/servletbridge/FrameworkLauncher.class
+SHA-256-Digest: rIYZ5g78fu9DTBkLunDzFplvxvGh0Ttr+uFFwynY3Gg=
+
+Name: org/eclipse/equinox/servletbridge/CloseableURLClassLoader$1.clas
+ s
+SHA-256-Digest: k5OlrjyvvYDyJdGwlVisf4TT8nFEU53h0063Xyqlrm4=
+
+Name: org/eclipse/equinox/servletbridge/FrameworkLauncher$2.class
+SHA-256-Digest: TpuYGkZn2JgPJ83Hec4ypekqAK8Sq6iGq6kTHb6sV3g=
+
+Name: org/eclipse/equinox/servletbridge/BridgeServlet.class
+SHA-256-Digest: xIKnE3aovWZkBc6WZ2hc8EF29LeEEZbbbdliTewGzRQ=
+
+Name: org/eclipse/equinox/servletbridge/BridgeServlet$ExtensionMapping
+ Request.class
+SHA-256-Digest: MmsQbqKonnDheaB1C8RF5ifSk0oKehn+Fz+zoWxnVLQ=
+
+Name: plugin.properties
+SHA-256-Digest: bknibgoy9k8KcIUkt0ygezgcNzA2xH9/C1VQwGfq1rw=
+
+Name: org/eclipse/equinox/servletbridge/CloseableURLClassLoader$Closea
+ bleJarURLStreamHandler.class
+SHA-256-Digest: qHLJ1dVsFhKM+zQIn3tTY19t638Kk4dFK4mzcCnlUwM=
+
+Name: org/eclipse/equinox/servletbridge/BridgeServlet$IncludedExtensio
+ nMappingRequest.class
+SHA-256-Digest: fnYCJUz/AI+gpUgQRqptObcwEUVOntJikzqDbDAhNcY=
+

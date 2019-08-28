@@ -22,5 +22,6 @@
 		<module>com.openmethods.openvxml.platforms.vtop.feature</module>
 		<module>com.openmethods.openvxml.platforms.vxmlb.feature</module>
 		<module>org.eclipse.vtp.desktop.feature</module>
+		<module>org.eclipse.vtp.support.feature</module>
 	</modules>
 </project>

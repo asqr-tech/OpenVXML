@@ -290,7 +290,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.derby_10.15.13"
+         id="org.apache.derby_10.151.3"
          download-size="0"
          install-size="0"
          version="0.0.0"
