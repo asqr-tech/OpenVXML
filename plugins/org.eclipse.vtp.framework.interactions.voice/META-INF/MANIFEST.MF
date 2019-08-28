@@ -9,7 +9,8 @@ Require-Bundle: org.eclipse.vtp.framework.interactions.core;bundle-version="5.1.
  org.eclipse.vtp.framework.core;bundle-version="5.1.0",
  org.eclipse.vtp.framework.common;bundle-version="5.1.0",
  org.junit
-Export-Package: org.eclipse.vtp.framework.interactions.voice.media,
+Export-Package: com.vht.openvxml.language.test,
+ org.eclipse.vtp.framework.interactions.voice.media,
  org.eclipse.vtp.framework.interactions.voice.services,
  org.eclipse.vtp.framework.interactions.voice.vxml
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

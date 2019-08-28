@@ -248,13 +248,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.derby"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="com.openmethods.openvxml.desktop.model.branding"
          download-size="0"
          install-size="0"
@@ -291,6 +284,13 @@
 
    <plugin
          id="com.openmethods.openvxml.desktop.model.workflow"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.derby_10.15.13"
          download-size="0"
          install-size="0"
          version="0.0.0"
