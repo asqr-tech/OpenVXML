@@ -71,7 +71,5 @@
 
 		<!-- Support Plugins -->
 		<module>org.apache.derby_10.151.3</module>
-		<module>org.eclipse.equinox.http.servletbridge_1.1.100</module>
-		<module>org.eclipse.equinox.servletbridge_1.5.0</module>
 	</modules>
 </project>

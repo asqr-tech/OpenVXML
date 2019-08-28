@@ -12,5 +12,8 @@
    <feature url="features/org.eclipse.vtp.framework.feature_5.0.0.qualifier.jar" id="org.eclipse.vtp.framework.feature" version="5.0.0.qualifier">
       <category name="openvxml"/>
    </feature>
+   <feature url="features/org.eclipse.vtp.support.feature_6.1.0.qualifier.jar" id="org.eclipse.vtp.support.feature" version="6.1.0.qualifier">
+      <category name="openvxml"/>
+   </feature>
    <category-def name="openvxml" label="OpenVXML"/>
 </site>
