@@ -71,5 +71,7 @@
 
 		<!-- Support Plugins -->
 		<module>org.apache.derby_10.151.3</module>
+		<module>com.sun.jna_4.1.0</module>
+		<module>com.sun.jna.platform_4.1.0</module>
 	</modules>
 </project>
