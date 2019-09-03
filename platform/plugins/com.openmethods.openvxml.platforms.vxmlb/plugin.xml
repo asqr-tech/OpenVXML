@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.vtp.framework.core.services">
+      <service
+            id="com.openmethods.openvxml.platforms.vxmlb.services.platform"
+            lazy="true"
+            name="VXML-b Platform"
+            scope="execution"
+            type="com.openmethods.openvxml.platforms.vxmlb.services.VXMLBVoicePlatform">
+         <identifier
+               name="org.eclipse.vtp.framework.interactions.core.platforms.IPlatform">
+            <qualifier
+                  name="MODE=VXMLB">
+            </qualifier>
+            <qualifier
+                  name="MODE=OpenIVR">
+            </qualifier>
+            <qualifier
+                  name="MODE=IVG">
+            </qualifier>
+         </identifier>
+      </service>
+      <service
+            id="com.openmethods.openvxml.platforms.vxmlb.services.platform.genesys"
+            lazy="true"
+            name="VXMLB for Genesys"
+            scope="execution"
+            type="com.openmethods.openvxml.platforms.vxmlb.services.VXMLBGenesysVoicePlatform">
+         <identifier
+               name="org.eclipse.vtp.framework.interactions.core.platforms.IPlatform">
+            <qualifier
+                  name="MODE=IVGGenesys">
+            </qualifier>
+         </identifier>
+      </service>
+   </extension>
+   <extension
+         point="org.eclipse.vtp.framework.interactions.core.extendedEvents">
+      <extended-event
+            name="externalmessage.cpa.machine">
+      </extended-event>
+   </extension>
+
+</plugin>
