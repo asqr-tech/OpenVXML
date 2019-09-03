@@ -10,4 +10,36 @@
 	<artifactId>com.vht.openvxml.desktop.plugins</artifactId>
 	<packaging>pom</packaging>
 	<name>Desktop Plugins</name>
+
+	<modules>
+		<module>com.openmethods.openvxml.desktop.model.branding</module>
+		<module>com.openmethods.openvxml.desktop.model.businessobjects</module>
+		<module>com.openmethods.openvxml.desktop.model.databases</module>
+		<module>com.openmethods.openvxml.desktop.model.dependencies</module>
+		<module>com.openmethods.openvxml.desktop.model.webservices</module>
+		<module>com.openmethods.openvxml.desktop.model.workflow</module>
+		<module>org.eclipse.vtp.desktop.core</module>
+		<module>org.eclipse.vtp.desktop.editors.core</module>
+		<module>org.eclipse.vtp.desktop.editors.themes.attraction</module>
+		<module>org.eclipse.vtp.desktop.editors.themes.core</module>
+		<module>org.eclipse.vtp.desktop.editors.themes.mantis</module>
+		<module>org.eclipse.vtp.desktop.editors.voice</module>
+		<module>org.eclipse.vtp.desktop.export</module>
+		<module>org.eclipse.vtp.desktop.media.core</module>
+		<module>org.eclipse.vtp.desktop.model.core</module>
+		<module>org.eclipse.vtp.desktop.media.voice</module>
+		<module>org.eclipse.vtp.desktop.model.elements.core</module>
+		<module>org.eclipse.vtp.desktop.model.interactive.core</module>
+		<module>org.eclipse.vtp.desktop.model.interactive.voice</module>
+		<module>org.eclipse.vtp.desktop.model.legacy</module>
+		<module>org.eclipse.vtp.desktop.projects.core</module>
+		<module>org.eclipse.vtp.desktop.projects.interactive.core</module>
+		<module>org.eclipse.vtp.desktop.projects.voice</module>
+		<module>org.eclipse.vtp.desktop.views</module>
+		<module>org.eclipse.vtp.modules.attacheddata.ui</module>
+		<module>org.eclipse.vtp.modules.database.ui</module>
+		<module>org.eclipse.vtp.modules.interactive.ui</module>
+		<module>org.eclipse.vtp.modules.standard.ui</module>
+		<module>org.eclipse.vtp.modules.webservice.ui</module>
+	</modules>
 </project>

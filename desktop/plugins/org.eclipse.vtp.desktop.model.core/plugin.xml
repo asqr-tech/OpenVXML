@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="paperSize" name="VTP Paper Size" schema="schema/paperSize.exsd"/>
+   <extension-point id="configurationContexts" name="Configuration Contexts" schema="schema/configurationContexts.exsd"/>
+   <extension-point id="projectAspects" name="OpenVXML Project Aspects" schema="schema/projectAspects.exsd"/>
+   <extension
+         point="org.eclipse.vtp.desktop.model.core.paperSize">
+      <paper_size
+            id="org.eclipse.vtp.desktop.model.core.Letter"
+            landscapeHeight="816"
+            landscapeWidth="1012"
+            name="Letter (8.5 x 11)"
+            portraitHeight="1012"
+            portraitWidth="816"/>
+   </extension>
+   <extension
+         id="WorkflowProjectNature"
+         name="Workflow Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.eclipse.vtp.desktop.model.core.natures.WorkflowProjectNature">
+         </run>
+      </runtime>
+   </extension>
+   <extension
+         id="WorkflowProjectNature5_0"
+         name="Workflow Project Nature v5"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.eclipse.vtp.desktop.model.core.natures.WorkflowProjectNature5_0">
+         </run>
+      </runtime>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="org.eclipse.vtp.desktop.model.core.internal.IsWorkflowProjectPropertyTester"
+            id="org.eclipse.vtp.desktop.model.core.isWorkflowProjectTester"
+            namespace="org.eclipse.vtp.desktop.model.core"
+            properties="isWorkflow"
+            type="org.eclipse.core.resources.IProject">
+      </propertyTester>
+      <propertyTester
+            class="org.eclipse.vtp.desktop.model.core.internal.HasProjectAspect"
+            id="org.eclipse.vtp.desktop.model.core.hasProjectAspect"
+            namespace="org.eclipse.vtp.desktop.model.core"
+            properties="hasProjectAspect"
+            type="org.eclipse.core.resources.IProject">
+      </propertyTester>
+   </extension>
+
+</plugin>

@@ -6,11 +6,17 @@
    <feature url="features/com.vht.elements.feature_5.2.0.qualifier.jar" id="com.vht.elements.feature" version="5.2.0.qualifier">
       <category name="elements"/>
    </feature>
+   <feature url="features/com.vht.vtp.desktop.feature_5.2.0.qualifier.jar" id="com.vht.vtp.desktop.feature" version="5.2.0.qualifier">
+      <category name="desktop"/>
+   </feature>
    <category-def name="openvxml" label="OpenVXML - VHT VeX Framework"/>
    <category-def name="framework" label="Framwork Dependencies">
       <category name="openvxml"/>
    </category-def>
    <category-def name="elements" label="VHT Dependencies - 3rd Party Libraries">
+      <category name="openvxml"/>
+   </category-def>
+   <category-def name="desktop" label="OpenVXML Desktop Feature">
       <category name="openvxml"/>
    </category-def>
 </site>
