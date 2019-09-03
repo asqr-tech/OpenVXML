@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: com.sun.jna.platform_4.1.0
-Bundle-SymbolicName: com.sun.jna.platform_4.1.0;singleton:=true
-Bundle-Version: 4.1.0
-Bundle-Vendor: SUN JNA
-Automatic-Module-Name: com.sun.jna.platform_4.1.0
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-ActivationPolicy: lazy
