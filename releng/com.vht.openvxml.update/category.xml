@@ -1,3 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+   <feature url="features/com.vht.opevxml.framework.feature_5.2.0.qualifier.jar" id="com.vht.opevxml.framework.feature" version="5.2.0.qualifier">
+      <category name="framework"/>
+   </feature>
+   <feature url="features/com.vht.elements.feature_5.2.0.qualifier.jar" id="com.vht.elements.feature" version="5.2.0.qualifier">
+      <category name="elements"/>
+   </feature>
+   <category-def name="openvxml" label="OpenVXML - VHT VeX Framework"/>
+   <category-def name="framework" label="Framwork Dependencies">
+      <category name="openvxml"/>
+   </category-def>
+   <category-def name="elements" label="VHT Dependencies - 3rd Party Libraries">
+      <category name="openvxml"/>
+   </category-def>
 </site>

@@ -10,4 +10,8 @@
 	<artifactId>com.vht.openvxml.elements.plugins</artifactId>
 	<packaging>pom</packaging>
 	<name>Elements Plugins</name>
+
+	<modules>
+		<module>org.apache.commons.fileupload_1.3.3</module>
+	</modules>
 </project>
