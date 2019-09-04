@@ -14,5 +14,6 @@
 	<modules>
 		<module>org.apache.commons.fileupload_1.3.3</module>
 		<module>javax.xml-api_2.3.1</module>
+		<module>org.apache.derby_10.14.2</module>
 	</modules>
 </project>

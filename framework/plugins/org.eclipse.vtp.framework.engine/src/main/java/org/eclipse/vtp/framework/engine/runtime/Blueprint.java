@@ -52,8 +52,8 @@ public class Blueprint
 			ServiceDescriptor[] serviceDescriptors, IExtensionRegistry registry)
 	{
 		this.configurationIndex = indexConfigurations(configurationDescriptors);
-		List processServiceDescriptors = new ArrayList(serviceDescriptors.length);
-		List sessionServiceDescriptors = new ArrayList(serviceDescriptors.length);
+		List<ServiceDescriptor> processServiceDescriptors = new ArrayList<ServiceDescriptor>(serviceDescriptors.length);
+		List<ServiceDescriptor> sessionServiceDescriptors = new ArrayList<ServiceDescriptor>(serviceDescriptors.length);
 		List executionServiceDescriptors = new ArrayList(serviceDescriptors.length);
 		List actionServiceDescriptors = new ArrayList(serviceDescriptors.length);
 		for (int i = 0; i < serviceDescriptors.length; ++i)
