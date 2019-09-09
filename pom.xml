@@ -15,7 +15,7 @@
 		<module>framework</module>
 		<module>elements</module>
 		<module>desktop</module>
-		<module>platform</module>
+		<module>platforms</module>
 	</modules>
 
 	<build>
