@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.fasterxml.jackson.databind
+Bundle-SymbolicName: com.fasterxml.jackson.databind;singleton:=true
+Bundle-Version: 2.9.8
+Automatic-Module-Name: jackson.databind
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

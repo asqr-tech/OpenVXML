@@ -45,7 +45,7 @@ public class AttachedDataManager implements ConfigurationManager
 	/**	URI used as the namespace for xml elements */
 	public static final String NAMESPACE_URI = "http://eclipse.org/vtp/xml/configuration/attacheddata";
 	/**	The current version of this configuration's xml format */
-	public static final String XML_VERSION = "5.0.0";
+	public static final String XML_VERSION = "6.0.0";
 
 	/**	A map of the bindings indexed on the binding name */
 	private Map<String, AttachedDataBinding> bindings;

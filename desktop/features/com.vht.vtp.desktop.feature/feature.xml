@@ -2,7 +2,7 @@
 <feature
       id="com.vht.vtp.desktop.feature"
       label="VTP Desktop Feature"
-      version="5.2.0.qualifier"
+      version="6.0.0.qualifier"
       provider-name="VHT">
 
    <description url="http://www.example.com/description">

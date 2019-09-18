@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: javax.xml.rpc
+Bundle-SymbolicName: javax.xml.rpc;singleton:=true
+Bundle-Version: 3.1.2
+Bundle-Vendor: javax
+Automatic-Module-Name: javax.xml.rpc
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

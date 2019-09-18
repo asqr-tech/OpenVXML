@@ -2,7 +2,7 @@
 <feature
       id="com.vht.opevxml.framework.feature"
       label="VTP Framework feature"
-      version="5.2.0.qualifier"
+      version="6.0.0.qualifier"
       provider-name="VHT">
 
    <description url="http://www.example.com/description">

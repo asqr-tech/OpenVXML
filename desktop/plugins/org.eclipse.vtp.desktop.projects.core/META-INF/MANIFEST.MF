@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Eclipse VTP Projects Core Plug-in
 Bundle-SymbolicName: org.eclipse.vtp.desktop.projects.core;singleton:=true
-Bundle-Version: 5.1.0.qualifier
+Bundle-Version: 6.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: Eclipse.org
 Bundle-Localization: plugin
@@ -18,21 +18,21 @@ Require-Bundle: org.eclipse.core.runtime,
  org.apache.xerces;visibility:=reexport,
  org.eclipse.ui.navigator.resources,
  org.eclipse.jface.text,
- org.eclipse.vtp.framework.common;bundle-version="5.1.0",
- org.eclipse.vtp.framework.engine;bundle-version="5.1.0",
- org.eclipse.vtp.framework.interactions.core;bundle-version="5.1.0",
- org.eclipse.vtp.framework.util;bundle-version="5.1.0",
- org.eclipse.vtp.framework.databases;bundle-version="5.1.0",
- org.eclipse.vtp.framework.webservices;bundle-version="5.1.0",
- org.eclipse.vtp.desktop.core;bundle-version="5.1.0",
- org.eclipse.vtp.desktop.model.core;bundle-version="5.1.0",
- org.eclipse.vtp.desktop.model.interactive.core;bundle-version="5.1.0",
- com.openmethods.openvxml.desktop.model.branding;bundle-version="5.1.0",
- com.openmethods.openvxml.desktop.model.businessobjects;bundle-version="5.1.0",
- com.openmethods.openvxml.desktop.model.workflow;bundle-version="5.1.0",
- com.openmethods.openvxml.desktop.model.databases;bundle-version="5.1.0",
- com.openmethods.openvxml.desktop.model.dependencies;bundle-version="5.1.0",
- com.openmethods.openvxml.desktop.model.webservices;bundle-version="5.1.0"
+ org.eclipse.vtp.framework.common;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.engine;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.interactions.core;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.util;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.databases;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.webservices;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.model.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.model.interactive.core;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.branding;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.businessobjects;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.workflow;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.databases;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.dependencies;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.webservices;bundle-version="6.0.0"
 Export-Package: org.eclipse.vtp.desktop.projects.core,
  org.eclipse.vtp.desktop.projects.core.builder,
  org.eclipse.vtp.desktop.projects.core.dialogs,

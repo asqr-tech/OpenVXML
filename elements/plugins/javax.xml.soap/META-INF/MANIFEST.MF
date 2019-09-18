@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: javax.xml.soap
+Bundle-SymbolicName: javax.xml.soap;singleton:=true
+Bundle-Version: 3.0.1
+Bundle-Vendor: javax
+Automatic-Module-Name: javax.xml.soap
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

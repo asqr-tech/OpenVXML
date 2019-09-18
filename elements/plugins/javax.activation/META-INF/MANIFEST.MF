@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: javax.activation
+Bundle-SymbolicName: javax.activation;singleton:=true
+Bundle-Version: 1.2.0
+Bundle-Vendor: javax
+Automatic-Module-Name: javax.activation
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

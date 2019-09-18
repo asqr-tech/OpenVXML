@@ -29,7 +29,7 @@ public class MenuChoiceBindingManager implements ConfigurationManager, BrandMana
 	/**	The unique identifier for this manager type */
 	public static final String TYPE_ID = "org.eclipse.vtp.configuration.menuchoice";
 	/**	The current XML structure version used by this manager */
-	public static final String XML_VERSION = "5.0.0";
+	public static final String XML_VERSION = "6.0.0";
 	
 	/**	The brand manager to use when resolving the brand hierarchy */
 	private BrandManager brandManager = null;

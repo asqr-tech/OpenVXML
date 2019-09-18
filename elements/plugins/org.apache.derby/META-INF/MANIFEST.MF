@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.apache.derby
+Bundle-SymbolicName: org.apache.derby;singleton:=true
+Bundle-Version: 10.14.2
+Bundle-Vendor: Apache Foundation
+Automatic-Module-Name: org.apache.derby_10.14.2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

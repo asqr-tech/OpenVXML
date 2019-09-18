@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.apache.xerces
+Bundle-SymbolicName: org.apache.xerces;singleton:=true
+Bundle-Version: 2.9.1
+Bundle-Vendor: apache
+Automatic-Module-Name: org.apache.xerces
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.apache.xerces.parsers,
+ org.apache.xerces.xni
+Bundle-ActivationPolicy: lazy

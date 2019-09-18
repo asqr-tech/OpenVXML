@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.vht.opevxml.framework.feature_5.2.0.qualifier.jar" id="com.vht.opevxml.framework.feature" version="5.2.0.qualifier">
+   <feature url="features/com.vht.opevxml.framework.feature_6.0.0.qualifier.jar" id="com.vht.opevxml.framework.feature" version="6.0.0.qualifier">
       <category name="framework"/>
    </feature>
-   <feature url="features/com.vht.elements.feature_5.2.0.qualifier.jar" id="com.vht.elements.feature" version="5.2.0.qualifier">
+   <feature url="features/com.vht.elements.feature_6.0.0.qualifier.jar" id="com.vht.elements.feature" version="6.0.0.qualifier">
       <category name="elements"/>
    </feature>
-   <feature url="features/com.vht.vtp.desktop.feature_5.2.0.qualifier.jar" id="com.vht.vtp.desktop.feature" version="5.2.0.qualifier">
+   <feature url="features/com.vht.vtp.desktop.feature_6.0.0.qualifier.jar" id="com.vht.vtp.desktop.feature" version="6.0.0.qualifier">
       <category name="desktop"/>
    </feature>
-   <feature url="features/com.openmethods.openvxml.idriver.feature_5.2.0.qualifier.jar" id="com.openmethods.openvxml.idriver.feature" version="5.2.0.qualifier">
+   <feature url="features/com.openmethods.openvxml.idriver.feature_6.0.0.qualifier.jar" id="com.openmethods.openvxml.idriver.feature" version="6.0.0.qualifier">
       <category name="platform"/>
    </feature>
-   <feature url="features/com.openmethods.openvxml.platforms.avp.feature_5.2.0.qualifier.jar" id="com.openmethods.openvxml.platforms.avp.feature" version="5.2.0.qualifier">
+   <feature url="features/com.openmethods.openvxml.platforms.avp.feature_6.0.0.qualifier.jar" id="com.openmethods.openvxml.platforms.avp.feature" version="6.0.0.qualifier">
       <category name="platform"/>
    </feature>
-   <feature url="features/com.openmethods.openvxml.platforms.cvp.feature_5.2.0.qualifier.jar" id="com.openmethods.openvxml.platforms.cvp.feature" version="5.2.0.qualifier">
+   <feature url="features/com.openmethods.openvxml.platforms.cvp.feature_6.0.0.qualifier.jar" id="com.openmethods.openvxml.platforms.cvp.feature" version="6.0.0.qualifier">
       <category name="platform"/>
    </feature>
-   <feature url="features/com.openmethods.openvxml.platforms.genesys.feature_5.2.0.qualifier.jar" id="com.openmethods.openvxml.platforms.genesys.feature" version="5.2.0.qualifier">
+   <feature url="features/com.openmethods.openvxml.platforms.genesys.feature_6.0.0.qualifier.jar" id="com.openmethods.openvxml.platforms.genesys.feature" version="6.0.0.qualifier">
       <category name="platform"/>
    </feature>
-   <feature url="features/com.openmethods.openvxml.platforms.prophecy.feature_5.2.0.qualifier.jar" id="com.openmethods.openvxml.platforms.prophecy.feature" version="5.2.0.qualifier">
+   <feature url="features/com.openmethods.openvxml.platforms.prophecy.feature_6.0.0.qualifier.jar" id="com.openmethods.openvxml.platforms.prophecy.feature" version="6.0.0.qualifier">
       <category name="platform"/>
    </feature>
-   <feature url="features/com.openmethods.openvxml.platforms.vtop.feature_5.2.0.qualifier.jar" id="com.openmethods.openvxml.platforms.vtop.feature" version="5.2.0.qualifier">
+   <feature url="features/com.openmethods.openvxml.platforms.vtop.feature_6.0.0.qualifier.jar" id="com.openmethods.openvxml.platforms.vtop.feature" version="6.0.0.qualifier">
       <category name="platform"/>
    </feature>
-   <feature url="features/com.openmethods.openvxml.platforms.vxmlb.feature_5.2.0.qualifier.jar" id="com.openmethods.openvxml.platforms.vxmlb.feature" version="5.2.0.qualifier">
+   <feature url="features/com.openmethods.openvxml.platforms.vxmlb.feature_6.0.0.qualifier.jar" id="com.openmethods.openvxml.platforms.vxmlb.feature" version="6.0.0.qualifier">
       <category name="platform"/>
    </feature>
    <category-def name="openvxml" label="OpenVXML - VHT VeX Framework"/>

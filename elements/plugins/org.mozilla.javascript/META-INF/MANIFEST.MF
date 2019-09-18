@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.mozilla.javascript
+Bundle-SymbolicName: org.mozilla.javascript;singleton:=true
+Bundle-Version: 1.7.5
+Bundle-ClassPath: .
+Require-Bundle: javax.xml.stream,
+  org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.mozilla.javascript
+Bundle-ActivationPolicy: lazy
+Export-Package: org.mozilla.javascript

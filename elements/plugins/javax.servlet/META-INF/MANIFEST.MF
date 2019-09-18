@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: javax.servlet
+Bundle-SymbolicName: javax.servlet;singleton:=true
+Bundle-Version: 3.0.0
+Bundle-ClassPath: .
+Bundle-Vendor: javax
+Export-Package: javax.servlet,
+ javax.servlet.annotation,
+ javax.servlet.descriptor,
+ javax.servlet.http
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: javax.servlet
+Bundle-ActivationPolicy: lazy
