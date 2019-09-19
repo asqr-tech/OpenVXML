@@ -18,7 +18,6 @@
 		<module>com.fasterxml.jackson.annotations</module>
 		<module>com.fasterxml.jackson.core</module>
 		<module>com.fasterxml.jackson.databind</module>
-		<module>org.mozilla.javascript</module>
 		<module>org.eclipse.equinox.servletbridge</module>
 	</modules>
 </project>
