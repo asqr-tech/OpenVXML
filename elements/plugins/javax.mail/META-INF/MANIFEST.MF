@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: javax.mail
-Bundle-SymbolicName: javax.mail;singleton:=true
-Bundle-Version: 1.4.7
-Automatic-Module-Name: javax.mail
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-ActivationPolicy: lazy

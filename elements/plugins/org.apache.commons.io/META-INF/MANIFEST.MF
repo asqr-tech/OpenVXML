@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: org.apache.commons.io
-Bundle-SymbolicName: org.apache.commons.io;singleton:=true
-Bundle-Version: 2.5.0
-Bundle-Vendor: apache
-Automatic-Module-Name: org.apache.commons.io
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-ActivationPolicy: lazy

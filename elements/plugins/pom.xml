@@ -13,23 +13,11 @@
 
 	<modules>
 		<module>org.apache.commons.fileupload</module>
-		<module>javax.xml</module>
 		<module>org.apache.derby</module>
 		<module>javax.xml.bind</module>
 		<module>com.fasterxml.jackson.annotations</module>
 		<module>com.fasterxml.jackson.core</module>
 		<module>com.fasterxml.jackson.databind</module>
-		<module>javax.activation</module>
-		<module>javax.mail</module>
-		<module>javax.servlet</module>
-		<module>javax.wsdl</module>
-		<module>javax.xml.rpc</module>
-		<module>javax.xml.soap</module>
-		<module>org.apache.commons.discovery</module>
-		<module>org.apache.commons.io</module>
-		<module>org.apache.xerces</module>
-		<module>org.apache.xml.resolver</module>
-		<module>org.apache.xml.serializer</module>
 		<module>org.mozilla.javascript</module>
 		<module>org.eclipse.equinox.servletbridge</module>
 	</modules>
