@@ -19,5 +19,8 @@
 		<module>com.fasterxml.jackson.core</module>
 		<module>com.fasterxml.jackson.databind</module>
 		<module>org.eclipse.equinox.servletbridge</module>
+		<module>org.eclipse.core.runtime.compatibility.auth</module>
+		<module>org.eclipse.core.runtime.compatibility.common</module>
+		<module>org.eclipse.equinox.http.servletbridge</module>
 	</modules>
 </project>

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.equinox.http.servletbridge
+Bundle-SymbolicName: org.eclipse.equinox.http.servletbridge
+Bundle-Version: 1.1.0
+Bundle-ClassPath: .
+Bundle-Vendor: Eclipse
+Export-Package: org.eclipse.equinox.http.servletbridge.internal;version="1.1.0"
+Require-Bundle: javax.servlet,
+  org.eclipse.core.runtime,
+  org.eclipse.equinox.http.servlet,
+  org.eclipse.equinox.servletbridge
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.eclipse.equinox.http.servletbridge

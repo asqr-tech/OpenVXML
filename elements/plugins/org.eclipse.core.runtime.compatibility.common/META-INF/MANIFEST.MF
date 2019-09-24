@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.core.runtime.compatibility.auth
+Bundle-SymbolicName: org.eclipse.core.runtime.compatibility.common
+Bundle-Version: 3.6.200
+Bundle-ClassPath: .
+Bundle-Vendor: Eclipse
+Export-Package: org.eclipse.core.internal.boot,
+ org.eclipse.core.internal.runtime,
+ org.eclipse.core.runtime,
+ org.eclipse.equinox.events
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.eclipse.core.runtime.compatibility.common

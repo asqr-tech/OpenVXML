@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.core.runtime.compatibility.auth
+Bundle-SymbolicName: org.eclipse.core.runtime.compatibility.auth
+Bundle-Version: 3.2.100
+Bundle-ClassPath: .
+Bundle-Vendor: Eclipse
+Export-Package: org.eclipse.core.internal.runtime.auth;version="3.2.100"
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.eclipse.core.runtime.compatibility.auth
