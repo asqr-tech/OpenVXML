@@ -79,8 +79,10 @@ public class AvpWithIDriverPlatform extends VoicePlatform
 	public void generateInitialVariableRequests(Map<String, String> variables) {
 		// TODO Auto-generated method stub
 		super.generateInitialVariableRequests(variables);
-		variables.put("avpUCID", "session.avaya.ucid");
-        variables.put("avpPort", "session.avaya.telephone.called_extension");
+//		variables.put("avpUCID", "session.avaya.ucid");
+//        variables.put("avpPort", "session.avaya.telephone.called_extension");
+        variables.put("avpUCID", "''");
+        variables.put("avpPort", "''");
 	}
 
 	@Override

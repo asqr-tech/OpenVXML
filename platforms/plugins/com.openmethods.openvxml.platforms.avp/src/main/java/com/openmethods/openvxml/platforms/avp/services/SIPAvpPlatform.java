@@ -77,7 +77,8 @@ public class SIPAvpPlatform extends VoicePlatform
 	@Override
 	public void generateInitialVariableRequests(Map<String, String> variables) {
 		super.generateInitialVariableRequests(variables);
-		variables.put("avpUCID", "session.avaya.ucid");
+		//variables.put("avpUCID", "session.avaya.ucid");
+		variables.put("avpUCID", "''");
         variables.put("avpAAI", "session.connection.aai");
 	}
 
