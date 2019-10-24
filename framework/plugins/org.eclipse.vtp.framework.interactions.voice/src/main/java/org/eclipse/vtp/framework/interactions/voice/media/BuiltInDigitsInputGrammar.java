@@ -21,7 +21,7 @@ import org.w3c.dom.Element;
 public class BuiltInDigitsInputGrammar extends BuiltInInputGrammar
 {
 	public static final String ELEMENT_NAME = "builtin-digits-input-grammar"; //$NON-NLS-1$
-	public static final String DATA_IDENTIFIER = "VXML:Builtin:digits"; //$NON-NLS-1$
+	public static final String DATA_IDENTIFIER = "builtin:dtmf/digits"; //$NON-NLS-1$
 	
 	private String minDigits = "1";
 	private String maxDigits = "6";
@@ -83,7 +83,8 @@ public class BuiltInDigitsInputGrammar extends BuiltInInputGrammar
 	 */
 	public String getBuiltInInputURI()
 	{
-		return DATA_IDENTIFIER + "?minlength=" + minDigits +";maxlength=" + maxDigits;
+		//return DATA_IDENTIFIER + "?minlength=" + minDigits +";maxlength=" + maxDigits;
+		return DATA_IDENTIFIER + "?length=1-32";
 	}
 
 	public String toString()
