@@ -21,7 +21,7 @@ import org.w3c.dom.Element;
 public class BuiltInPhoneInputGrammar extends BuiltInInputGrammar
 {
 	public static final String ELEMENT_NAME = "builtin-phone-input-grammar"; //$NON-NLS-1$
-	public static final String DATA_IDENTIFIER = "VXML:Builtin:phone"; //$NON-NLS-1$
+	public static final String DATA_IDENTIFIER = "builtin:dtmf/phone"; //$NON-NLS-1$
 	
 	public BuiltInPhoneInputGrammar()
 	{
