@@ -84,11 +84,12 @@ public class BuiltInDigitsInputGrammar extends BuiltInInputGrammar
 	public String getBuiltInInputURI()
 	{
 		//return DATA_IDENTIFIER + "?minlength=" + minDigits +";maxlength=" + maxDigits;
-		return DATA_IDENTIFIER + "?length=1-32";
+		return DATA_IDENTIFIER + "?length=" + minDigits + "-" + maxDigits;
+		//return DATA_IDENTIFIER;
 	}
 
 	public String toString()
 	{
-		return "BuiltIn:Digits [minimum digits=" + this.minDigits + ", maximum digits=" + this.maxDigits + "]";
+		return "BuiltIn-debug:Digits [minimum digits=" + this.minDigits + ", maximum digits=" + this.maxDigits + "]";
 	}
 }

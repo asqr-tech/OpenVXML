@@ -88,7 +88,7 @@ public class VoicePlatform extends AbstractPlatform implements VXMLConstants
 	protected static final BigDecimal ONE_HUNDRED = new BigDecimal("100");
 	protected static final BigDecimal TEN = new BigDecimal("10");
 	/** Comment for VXML_BUILTIN_PREFIX. */
-	protected static final String VXML_BUILTIN_PREFIX = "VXML:Builtin:";
+	protected static final String VXML_BUILTIN_PREFIX = "builtin:dtmf/";
 
 	/** The media provider. */
 	private IMediaProvider mediaProvider;
