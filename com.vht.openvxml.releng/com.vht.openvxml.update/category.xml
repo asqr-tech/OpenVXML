@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.vht.vtp.framework.feature_6.0.0.qualifier.jar" id="com.vht.vtp.framework.feature" version="6.0.0.qualifier">
+      <category name="framework"/>
+   </feature>
+   <feature url="features/com.vht.vtp.desktop.feature_6.0.0.qualifier.jar" id="com.vht.vtp.desktop.feature" version="6.0.0.qualifier">
+      <category name="desktop"/>
+   </feature>
+   <feature url="features/com.vht.openvxml.idriver.feature_6.0.0.qualifier.jar" id="com.vht.openvxml.idriver.feature" version="6.0.0.qualifier">
+      <category name="platfrom"/>
+   </feature>
+   <feature url="features/com.vht.openvxml.platforms.avp.feature_6.0.0.qualifier.jar" id="com.vht.openvxml.platforms.avp.feature" version="6.0.0.qualifier">
+      <category name="platfrom"/>
+   </feature>
+   <feature url="features/com.vht.openvxml.platforms.cvp.feature_6.0.0.qualifier.jar" id="com.vht.openvxml.platforms.cvp.feature" version="6.0.0.qualifier">
+      <category name="platfrom"/>
+   </feature>
+   <feature url="features/com.vht.openvxml.platforms.genesys.feature_6.0.0.qualifier.jar" id="com.vht.openvxml.platforms.genesys.feature" version="6.0.0.qualifier">
+      <category name="platfrom"/>
+   </feature>
+   <feature url="features/com.vht.openvxml.platforms.prophecy.feature_6.0.0.qualifier.jar" id="com.vht.openvxml.platforms.prophecy.feature" version="6.0.0.qualifier">
+      <category name="platfrom"/>
+   </feature>
+   <feature url="features/com.vht.openvxml.platforms.vtop.feature_6.0.0.qualifier.jar" id="com.vht.openvxml.platforms.vtop.feature" version="6.0.0.qualifier">
+      <category name="platfrom"/>
+   </feature>
+   <feature url="features/com.vht.openvxml.platforms.vxmlb.feature_6.0.0.qualifier.jar" id="com.vht.openvxml.platforms.vxmlb.feature" version="6.0.0.qualifier">
+      <category name="platfrom"/>
+   </feature>
+   <category-def name="framework" label="VTP Framework Support"/>
+   <category-def name="desktop" label="OpenVXML Desktop Support"/>
+   <category-def name="platfrom" label="VeX Framework Platform Support"/>
+</site>

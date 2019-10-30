@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Desktop Workflow Model
+Bundle-SymbolicName: com.openmethods.openvxml.desktop.model.workflow;singleton:=true
+Bundle-Version: 6.0.0.qualifier
+Bundle-Vendor: OPENMETHODS
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.swt,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ org.apache.derby;bundle-version="10.5.1",
+ org.eclipse.vtp.desktop.model.core;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.branding;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.businessobjects;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.util;bundle-version="6.0.0"
+Import-Package: org.w3c.dom
+Export-Package: com.openmethods.openvxml.desktop.model.workflow,
+ com.openmethods.openvxml.desktop.model.workflow.configuration,
+ com.openmethods.openvxml.desktop.model.workflow.design,
+ com.openmethods.openvxml.desktop.model.workflow.internal,
+ com.openmethods.openvxml.desktop.model.workflow.internal.design

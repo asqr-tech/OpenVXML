@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.vht.openvxml</groupId>
+		<artifactId>com.vht.openvxml.platforms</artifactId>
+		<version>6.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.vht.openvxml.platforms.plugins</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>com.openmethods.openvxml.idriver</module>
+		<module>com.openmethods.openvxml.idriver.runtime</module>
+		<module>com.openmethods.openvxml.idriver.ui</module>
+		<module>com.openmethods.openvxml.platforms.avp</module>
+		<module>com.openmethods.openvxml.platforms.avpwithidriver</module>
+		<module>com.openmethods.openvxml.platforms.cvp</module>
+		<module>com.openmethods.openvxml.platforms.dialogic</module>
+		<module>com.openmethods.openvxml.platforms.genesys</module>
+		<module>com.openmethods.openvxml.platforms.prophecy</module>
+		<module>com.openmethods.openvxml.platforms.vtop</module>
+		<module>com.openmethods.openvxml.platforms.vxmlb</module>
+		<module>com.openmethods.openvxml.platforms.vxmlbwithidriver</module>
+	</modules>
+</project>

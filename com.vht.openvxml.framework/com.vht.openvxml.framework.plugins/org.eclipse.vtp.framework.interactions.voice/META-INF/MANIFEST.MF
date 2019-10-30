@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VTP Framework Voice Plug-in
+Bundle-SymbolicName: org.eclipse.vtp.framework.interactions.voice;singleton:=true
+Bundle-Version: 6.0.0.qualifier
+Bundle-Vendor: Eclipse.org
+Require-Bundle: org.eclipse.vtp.framework.interactions.core;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.util;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.core;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.common;bundle-version="6.0.0"
+Export-Package: org.eclipse.vtp.framework.interactions.voice.media,
+ org.eclipse.vtp.framework.interactions.voice.services,
+ org.eclipse.vtp.framework.interactions.voice.vxml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

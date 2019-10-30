@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.vht.openvxml</groupId>
+		<artifactId>com.vht.openvxml.framework</artifactId>
+		<version>6.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.vht.openvxml.framework.plugins</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>org.eclipse.vtp.framework.common</module>
+		<module>org.eclipse.vtp.framework.core</module>
+		<module>org.eclipse.vtp.framework.databases</module>
+		<module>org.eclipse.vtp.framework.engine</module>
+		<module>org.eclipse.vtp.framework.interactions.core</module>
+		<module>org.eclipse.vtp.framework.interactions.voice</module>
+		<module>org.eclipse.vtp.framework.scripting.rhino</module>
+		<module>org.eclipse.vtp.framework.spi</module>
+		<module>org.eclipse.vtp.framework.util</module>
+		<module>org.eclipse.vtp.framework.webservices</module>
+	</modules>
+</project>

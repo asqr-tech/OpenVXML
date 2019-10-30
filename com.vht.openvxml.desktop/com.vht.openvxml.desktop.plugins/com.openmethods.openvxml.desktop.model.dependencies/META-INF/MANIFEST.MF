@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: External Dependencies Model
+Bundle-SymbolicName: com.openmethods.openvxml.desktop.model.dependencies;singleton:=true
+Bundle-Version: 6.0.0.qualifier
+Bundle-Vendor: OPENMETHODS
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.openmethods.openvxml.desktop.model.dependencies,
+ com.openmethods.openvxml.desktop.model.dependencies.internal
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ org.eclipse.vtp.desktop.model.core;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.workflow;bundle-version="6.0.0"

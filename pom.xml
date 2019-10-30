@@ -6,63 +6,23 @@
 		<groupId>com.vht.openvxml</groupId>
 		<artifactId>com.vht.openvxml.configuration</artifactId>
 		<version>6.0.0-SNAPSHOT</version>
-		<relativePath>./releng/com.vht.openvxml.configuration</relativePath>
+		<relativePath>./com.vht.openvxml.releng/com.vht.openvxml.configuration</relativePath>
 	</parent>
 	<artifactId>com.vht.openvxml.root</artifactId>
 	<packaging>pom</packaging>
+	<name>OpenVXML</name>
+
 	<modules>
-		<module>releng</module>
-		<module>framework</module>
-		<module>elements</module>
-		<module>desktop</module>
-		<module>platforms</module>
+		<module>com.vht.openvxml.releng</module>
+		<module>com.vht.openvxml.desktop</module>
+		<module>com.vht.openvxml.framework</module>
+		<module>com.vht.openvxml.platforms</module>
 	</modules>
 
 	<build>
-
-		<!-- Declaring test files location -->
-		<testSourceDirectory>src/test/java</testSourceDirectory>
-
 		<pluginManagement>
-			<plugins>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.12.4</version>
-					<executions>
-						<execution>
-							<id>test</id>
-							<phase>test</phase>
-							<configuration>
-								<includes>
-									<include>**/*Test.java</include>
-								</includes>
-							</configuration>
-							<goals>
-								<goal>test</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>2.5.1</version>
-					<executions>
-						<execution>
-							<id>compiletests</id>
-							<phase>test-compile</phase>
-							<goals>
-								<goal>testCompile</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
+			<plugins><!--This plugin's configuration is used to store Eclipse m2e 
+					settings only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>

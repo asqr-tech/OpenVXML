@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Standard Module UI
+Bundle-SymbolicName: org.eclipse.vtp.modules.standard.ui;singleton:=true
+Bundle-Version: 6.0.0.qualifier
+Bundle-Activator: org.eclipse.vtp.modules.standard.ui.Activator
+Bundle-Vendor: Eclipse.org
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.ui.forms,
+ org.eclipse.ui.ide,
+ org.eclipse.vtp.desktop.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.model.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.editors.themes.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.editors.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.model.elements.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.projects.core;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.util;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.common;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.export;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.branding;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.businessobjects;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.workflow;bundle-version="6.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.vtp.modules.standard.ui

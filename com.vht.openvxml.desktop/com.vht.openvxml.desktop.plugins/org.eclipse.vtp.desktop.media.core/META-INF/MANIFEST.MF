@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipse Voice Tools Desktop Media Core Plug-in
+Bundle-SymbolicName: org.eclipse.vtp.desktop.media.core;singleton:=true
+Bundle-Version: 6.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: org.eclipse.vtp.desktop.media.core.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.vtp.framework.util;bundle-version="6.0.0",
+ org.eclipse.vtp.framework.interactions.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.model.core;bundle-version="6.0.0",
+ org.eclipse.vtp.desktop.model.interactive.core;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.branding;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.businessobjects;bundle-version="6.0.0",
+ com.openmethods.openvxml.desktop.model.workflow;bundle-version="6.0.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.vtp.desktop.media.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Eclipse.org
