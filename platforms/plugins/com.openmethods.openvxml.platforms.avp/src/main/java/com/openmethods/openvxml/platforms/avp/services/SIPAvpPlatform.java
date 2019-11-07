@@ -79,6 +79,7 @@ public class SIPAvpPlatform extends VoicePlatform
 		super.generateInitialVariableRequests(variables);
 		//variables.put("avpUCID", "session.avaya.ucid");
 		variables.put("avpUCID", "''");
+		System.out.println("In SIPavp avpUCID : ");
         variables.put("avpAAI", "session.connection.aai");
 	}
 
